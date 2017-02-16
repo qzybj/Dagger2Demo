@@ -18,7 +18,7 @@ package com.brady.dagger2demo.ui;
 
 import android.app.Activity;
 
-import com.brady.dagger2demo.PerActivity;
+import com.brady.dagger2demo.module.annotation.PerActivity;
 import javax.inject.Inject;
 
 /**

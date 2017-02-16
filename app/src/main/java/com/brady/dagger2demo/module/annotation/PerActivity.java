@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.brady.dagger2demo;
+package com.brady.dagger2demo.module.annotation;
 
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 

@@ -1,4 +1,4 @@
-package com.brady.simple.coffee;
+package com.brady.simple.module.coffee;
 
 import dagger.Lazy;
 import javax.inject.Inject;

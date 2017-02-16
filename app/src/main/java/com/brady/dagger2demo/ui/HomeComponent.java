@@ -19,7 +19,7 @@ package com.brady.dagger2demo.ui;
 import com.brady.dagger2demo.AbstractActivityComponent;
 import com.brady.dagger2demo.ActivityModule;
 import com.brady.dagger2demo.ApplicationComponent;
-import com.brady.dagger2demo.PerActivity;
+import com.brady.dagger2demo.module.annotation.PerActivity;
 import dagger.Component;
 
 @PerActivity

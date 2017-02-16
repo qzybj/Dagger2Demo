@@ -17,6 +17,9 @@
 package com.brady.dagger2demo;
 
 import android.app.Activity;
+
+import com.brady.dagger2demo.module.annotation.PerActivity;
+
 import dagger.Module;
 import dagger.Provides;
 
@@ -34,7 +37,8 @@ public class ActivityModule {
   /**
    * Expose the activity to dependents in the graph.
    */
-  @Provides @PerActivity Activity activity() {
+  @Provides @PerActivity
+  Activity activity() {
     return activity;
   }
 }

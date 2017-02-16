@@ -1,4 +1,4 @@
-package com.brady.simple.coffee;
+package com.brady.simple.module.coffee;
 
 class ElectricHeater implements Heater {
   boolean heating;

@@ -1,4 +1,5 @@
-package com.brady.simple.coffee;
+package com.brady.simple.module.coffee;
+
 
 import dagger.Component;
 import javax.inject.Singleton;
