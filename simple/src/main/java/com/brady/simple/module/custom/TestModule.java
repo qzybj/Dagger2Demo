@@ -1,8 +1,5 @@
 package com.brady.simple.module.custom;
 
-import com.brady.simple.module.simple.PersonForContext;
-import com.brady.simple.module.simple.PersonForName;
-
 import dagger.Module;
 import dagger.Provides;
 
@@ -19,13 +16,7 @@ public class TestModule {
     }
 
     @Provides
-    String providesName(){
-        return name;
-    }
-
-    @PersonForContext
-    @Provides
-    TestBean providesTestBean(String name){
+    TestBean providesTestBean(){
         return new TestBean(name);
     }
 

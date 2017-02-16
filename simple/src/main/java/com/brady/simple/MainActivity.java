@@ -15,8 +15,14 @@ import com.brady.simple.module.animal.FoodComponent;
 import com.brady.simple.module.animal.FoodModule;
 import com.brady.simple.module.animal.interfaces.IAnimal;
 import com.brady.simple.module.animal.interfaces.IExtra;
+import com.brady.simple.module.custom.DaggerTestComponent;
+import com.brady.simple.module.custom.TestBean;
+import com.brady.simple.module.custom.TestComponent;
+import com.brady.simple.module.custom.TestModule;
 import com.brady.simple.module.injectframe.Injector;
 import com.brady.simple.module.injectframe.annotation.InjectView;
+import com.brady.simple.module.simple.PersonForContext;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -31,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Inject
     IAnimal animal_b;
 
+    @Inject
+    TestBean testBean;
+
     @InjectView(R.id.tv_msg)
     private TextView txt;
 
@@ -44,11 +53,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         FoodComponent  foodComponent = DaggerFoodComponent.builder().foodModule(new FoodModule()).build();
         ExtraComponent extraComponent = DaggerExtraComponent.builder().extraModule(new ExtraModule()).build();
+        //TestComponent testComponent = DaggerTestComponent.builder().testModule(new TestModule("1234")).build();
         DaggerAnimalComponent.builder()
                 .animalModule(new AnimalModule(this.getApplicationContext()))
                 .foodComponent(foodComponent)
                 .extraComponent(extraComponent)
+                .testModule(new TestModule("1234"))
                 .build().inject(this);
+
+        testBean.show();
 
     }
 

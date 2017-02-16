@@ -38,5 +38,4 @@ public class AnimalModule {
     public IAnimal providesTiger(@Named("Tiger")String food,@Named("Tiger")IExtra extra){
         return new AnimalBean("Tiger",food,extra);
     }
-
 }

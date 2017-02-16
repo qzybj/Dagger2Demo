@@ -1,9 +1,6 @@
 package com.brady.simple.module.custom;
 
 
-import android.content.Context;
-
-import com.brady.simple.MainActivity;
 import dagger.Component;
 
 /**
@@ -12,5 +9,5 @@ import dagger.Component;
 @Component(modules = TestModule.class )
 public interface TestComponent {
 
-    void injectTest(Context con);
+    TestBean providesTestBean();
 }
