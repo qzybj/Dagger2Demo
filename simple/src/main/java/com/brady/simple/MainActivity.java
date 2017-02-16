@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_one).setOnClickListener(this);
         findViewById(R.id.btn_two).setOnClickListener(this);
 
-
         FoodComponent  foodComponent = DaggerFoodComponent.builder().foodModule(new FoodModule()).build();
         ExtraComponent extraComponent = DaggerExtraComponent.builder().extraModule(new ExtraModule()).build();
         DaggerAnimalComponent.builder()
